@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<script>
+  $(document).ready(function() {
+    $("#target1").css("color", "red");
+    $("#target1").prop("disabled", true);
+    $("#target4").remove();
+    $("#target2").appendTo("#right-well");
+	$("#email-label").clone().appendTo('#box');
+  });
+</script>
+<html>
+<style>
+body {
+  background-color: gray;
+  text-align: center;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  min-width: 320px;
+  margin-bottom: 20px;
+}
+
+header {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px;
+}
+
+#form-outer {
+  background-color: rgb(250, 250, 250);
+  margin: 0 auto;
+  border-radius: 4px;
+  width: 75%;
+  max-width: 900px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.rightTab {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+.input-field {
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+</style>
+<h1 style="color:black" id="title">RESUME CUSTOMIZER</h1>
+<div id="form-outer">
+	<p id="description">
+		This tool will help you in your career!
+	</p>
+	<form id="personal-info" method="GET" action="aaadrienne.html">
+		<div class="rowTab">
+			<div class="labels">
+				<label id="name-label" for="name">Name:</label>
+			</div>
+			<div class="rightTab">
+				<input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+			</div>
+    </div>
+	<div class="rowTab">
+      <div class="labels">
+        <label id="phone-label" for="phone">Phone:</label>
+      </div>
+      <div class="rightTab">
+	  <input type="phone" name="phone" id="phone" class="input-field" required placeholder="Enter your phone number">
+      </div>
+    </div>
+	<div class="rowTab">
+      <div class="labels">
+        <label id="email-label" for="email">Email:</label>
+      </div>
+      <div class="rightTab">
+	  <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your email">
+      </div>
+    </div>
+	<h1>Enter previous work experience:</h1>
+	  <div class="rowTab">
+      <div class="labels">
+        <label id="jobtitle-label" for="jobtitle">Job Title:</label>
+      </div>
+      <div class="rightTab">
+	  <input type="jobtitle" name="jobtitle" id="jobtitle" class="input-field" required placeholder="Enter job title">
+      </div>
+    </div>
+	<div class="rowTab">
+      <div class="labels" id="box">
+        <label for="comments">Job Description</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:diagonal;" name="comment" placeholder="Enter your experience"></textarea>
+      </div>
+    </div>
+	<div class="rowTab">
+      <div class="labels">
+        <label id="location-label" for="location">Job Location:</label>
+      </div>
+      <div class="rightTab">
+	  <input type="location" name="location" id="location" class="input-field" required placeholder="Enter job location">
+      </div>
+    </div><div class="rowTab">
+      <div class="labels">
+        <label id="comapanyName-label" for="email">Company Name:</label>
+      </div>
+      <div class="rightTab">
+	  <input type="companyName" name="companyName" id="companyName" class="input-field" required placeholder="Enter company name">
+      </div>
+    </div>
+	<div class="rowTab">
+		<div class="labels">
+			<label id="date-label" for="date">Start date:</label>
+		</div>
+		<div class="rightTab">
+			<input type="date" name="start" class="input-field" placeholder="Enter start date">
+		</div>
+	</div>
+	<div class="rowTab">
+		<div class="labels">
+			<label id="date-label" for="date">End date:</label>
+		</div>
+		<div class="rightTab">
+			<input type="date" name="end" class="input-field" placeholder="Enter end date">
+		</div>
+	</div>
+	<div class="rowTab">
+      <div class="labels" id="box">
+        <label for="comments">Skills</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:diagonal;" name="comment" placeholder="Enter your skills"></textarea>
+      </div>
+    </div>
+	<button>add more experience</button>
+	  <button>submit</button>
+	<div id="addRow" class="addDatasetRow" onclick="addRowFor(this,'sample','offset',123); return false;>add another</div>
+	
+	
+
+	
+</html>
